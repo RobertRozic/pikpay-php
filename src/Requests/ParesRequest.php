@@ -4,16 +4,17 @@ namespace RobertRozic\PikPay\Requests;
 
 use GuzzleHttp\Client as HttpClient;
 use RobertRozic\PikPay\Gateway;
-use RobertRozic\PikPay\Responses\RefundResponse;
+use RobertRozic\PikPay\Requests\Request;
+use RobertRozic\PikPay\Responses\ParesResponse;
 
 /**
- * PikPay RefundRequest.
+ * PikPay PurchaseRequest.
  *
  * @author    Selim Salihovic <selim.salihovic@gmail.com>
  * @copyright 2016 SelimSalihovic
  * @license   http://opensource.org/licenses/mit-license.php MIT
  */
-class RefundRequest extends Request
+class ParesRequest extends Request
 {
     protected $uri;
     protected $params;
@@ -23,15 +24,14 @@ class RefundRequest extends Request
 
     public function __construct(HttpClient $httpClient, Gateway $gateway, array $params)
     {
-        parent::__construct($httpClient, $gateway, 'refund', $params);
-        $this->uri = '/transactions/' . $params['order-number'] . '/refund.xml';
+        parent::__construct($httpClient, $gateway, 'pares', $params);
+        $this->uri = '/pares';
         $this->httpClient = $httpClient;
-        $this->params = $params;
         $this->send();
     }
 
     public function response()
     {
-        return new RefundResponse($this->response);
+        return new ParesResponse($this->response);
     }
 }

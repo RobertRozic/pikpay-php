@@ -1,9 +1,9 @@
 <?php
 
-namespace SelimSalihovic\PikPay;
+namespace RobertRozic\PikPay;
 
 use GuzzleHttp\Client as HttpClient;
-use SelimSalihovic\PikPay\Requests;
+use RobertRozic\PikPay\Requests;
 
 /**
  * PikPay Gateway.
@@ -50,6 +50,11 @@ class Gateway
     public function capture(array $params)
     {
         return $this->createRequest(Requests\CaptureRequest::class, $params);
+    }
+
+    public function pares(array $params)
+    {
+        return $this->createRequest(Requests\ParesRequest::class, $params);
     }
 
     public function refund(array $params)

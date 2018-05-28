@@ -1,10 +1,10 @@
 <?php
 
-namespace SelimSalihovic\PikPay\Requests;
+namespace RobertRozic\PikPay\Requests;
 
 use GuzzleHttp\Client as HttpClient;
 use GuzzleHttp\Psr7\Request as HttpRequest;
-use SelimSalihovic\PikPay\Gateway;
+use RobertRozic\PikPay\Gateway;
 
 /**
  * PikPay Request.
@@ -27,7 +27,11 @@ class Request
     {
         $this->httpClient = $httpClient;
         $this->gateway = $gateway;
-        $this->xml = $this->parse($params, $root);
+        if( $root == 'pares') {
+            $this->xml = $this->parsePares($params);
+        } else {
+            $this->xml = $this->parse($params, $root);
+        }
     }
 
     protected function digest(array $params)
@@ -65,6 +69,17 @@ class Request
         $xml->addChild('authenticity-token', $this->gateway->apiKey());
 
         $xml->addChild('digest', $this->digest($params));
+
+        foreach ($params as $key => $value) {
+            $xml->addChild($key, $value);
+        }
+
+        return $xml->asXML();
+    }
+
+    protected function parsePares(array $params)
+    {
+        $xml = new \SimpleXMLElement('<' . 'secure-message' . '/>');
 
         foreach ($params as $key => $value) {
             $xml->addChild($key, $value);

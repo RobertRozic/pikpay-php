@@ -1,18 +1,17 @@
 {
-    "name": "selimsalihovic/pikpay-php",
+    "name": "robertrozic/pikpay-php",
     "type": "library",
     "description": "Payment Processing Library for PikPay",
     "keywords": [
-        "selimsalihovic",
+        "robertrozic",
         "pikpay-php"
     ],
-    "homepage": "https://github.com/selimsalihovic/pikpay-php",
+    "homepage": "https://github.com/robertrozic/pikpay-php",
     "license": "MIT",
     "authors": [
         {
-            "name": "Selim Salihovic",
-            "email": "selim.salihovic@gmail.com",
-            "homepage": "http://selimsalihovic.github.io/",
+            "name": "Robert Rozić",
+            "email": "rozic.robert@amplius.tech",
             "role": "Developer"
         }
     ],
@@ -26,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "SelimSalihovic\\PikPay\\": "src"
+            "RobertRozic\\PikPay\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "SelimSalihovic\\PikPay\\": "tests"
+            "RobertRozic\\PikPay\\": "tests"
         }
     },
     "scripts": {

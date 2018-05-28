@@ -1,6 +1,6 @@
 <?php
 
-namespace SelimSalihovic\PikPay\Responses;
+namespace RobertRozic\PikPay\Responses;
 
 /**
  * PikPay VoidResponse.

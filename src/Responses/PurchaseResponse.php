@@ -1,6 +1,7 @@
 <?php
 
-namespace SelimSalihovic\PikPay\Responses;
+namespace RobertRozic\PikPay\Responses;
+use SimpleXMLElement;
 
 /**
  * PikPay PurchaseResponse.
@@ -14,6 +15,18 @@ class PurchaseResponse extends Response
     public function isSuccessfull()
     {
         return $this->httpResponse->getStatusCode() == 201;
+    }
+
+    public function getData() {
+        $xml = $this->httpResponse->getBody()->getContents();
+        /** @var SimpleXMLElement $parsed_xml */
+        $parsed_xml = simplexml_load_string($xml);
+
+        if (property_exists($parsed_xml, 'acs-url')) {
+            $parsed_xml->secure = true;
+        }
+
+        return json_encode($parsed_xml);
     }
 
     public function transactionId()
