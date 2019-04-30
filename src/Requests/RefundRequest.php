@@ -1,10 +1,10 @@
 <?php
 
-namespace RobertRozic\PikPay\Requests;
+namespace RozicRobert\PikPay\Requests;
 
 use GuzzleHttp\Client as HttpClient;
-use RobertRozic\PikPay\Gateway;
-use RobertRozic\PikPay\Responses\RefundResponse;
+use RozicRobert\PikPay\Gateway;
+use RozicRobert\PikPay\Responses\RefundResponse;
 
 /**
  * PikPay RefundRequest.

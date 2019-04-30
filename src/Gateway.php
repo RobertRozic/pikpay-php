@@ -1,9 +1,9 @@
 <?php
 
-namespace RobertRozic\PikPay;
+namespace RozicRobert\PikPay;
 
 use GuzzleHttp\Client as HttpClient;
-use RobertRozic\PikPay\Requests;
+use RozicRobert\PikPay\Requests;
 
 /**
  * PikPay Gateway.

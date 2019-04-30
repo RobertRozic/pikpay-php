@@ -1,11 +1,11 @@
 <?php
 
-namespace RobertRozic\PikPay\Requests;
+namespace rozicrobert\PikPay\Requests;
 
 use GuzzleHttp\Client as HttpClient;
-use RobertRozic\PikPay\Gateway;
-use RobertRozic\PikPay\Requests\Request;
-use RobertRozic\PikPay\Responses\PurchaseResponse;
+use RozicRobert\PikPay\Gateway;
+use RozicRobert\PikPay\Requests\Request;
+use RozicRobert\PikPay\Responses\PurchaseResponse;
 
 /**
  * PikPay PurchaseRequest.

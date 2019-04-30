@@ -1,12 +1,12 @@
 {
-    "name": "robertrozic/pikpay-php",
+    "name": "rozicrobert/pikpay-php",
     "type": "library",
     "description": "Payment Processing Library for PikPay",
     "keywords": [
-        "robertrozic",
+        "rozicrobert",
         "pikpay-php"
     ],
-    "homepage": "https://github.com/robertrozic/pikpay-php",
+    "homepage": "https://github.com/rozicrobert/pikpay-php",
     "license": "MIT",
     "authors": [
         {
@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "RobertRozic\\PikPay\\": "src"
+            "rozicrobert\\PikPay\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "RobertRozic\\PikPay\\": "tests"
+            "rozicrobert\\PikPay\\": "tests"
         }
     },
     "scripts": {

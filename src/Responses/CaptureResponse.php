@@ -1,6 +1,6 @@
 <?php
 
-namespace RobertRozic\PikPay\Responses;
+namespace RozicRobert\PikPay\Responses;
 
 /**
  * PikPay CaptureResponse.
