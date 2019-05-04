@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "rozicrobert\\PikPay\\": "src"
+            "RozicRobert\\PikPay\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "rozicrobert\\PikPay\\": "tests"
+            "RozicRobert\\PikPay\\": "tests"
         }
     },
     "scripts": {
